@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>icon / status / error / filled / 16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="notification-/-high-contrast-/-03-toast-/-error" transform="translate(-17.000000, -17.000000)">
+            <g id="Organization-/-Status-/-error--filled-/-20" transform="translate(16.000000, 16.000000)">
+                <path d="M10,1 C5,1 1,5 1,10 C1,15 5,19 10,19 C15,19 19,15 19,10 C19,5 15,1 10,1 Z M13.5,14.5 L5.5,6.5 L6.5,5.5 L14.5,13.5 L13.5,14.5 Z" id="Fill" fill="#DA1E28"></path>
+                <polygon id="Inner-Fill" fill="#FFFFFF" points="13.5 14.5 5.5 6.5 6.5 5.5 14.5 13.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

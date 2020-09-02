@@ -1,0 +1,11 @@
+{
+"server":[
+ {
+   "DNS": "ec2-54-145-147-192.compute-1.amazonaws.com",
+    "user":"ec2-user",
+    "directory":"/home/ec2-user",
+    "JARNAME": "java-websocket-0.0.1-SNAPSHOT.war",
+    "PEM": "bowshot.pem"
+ }
+]
+}

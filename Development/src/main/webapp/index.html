@@ -1,0 +1,205 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+    <title>Chat</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="js/typeahead.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<div id="SearchOverlay" class="hidden">
+    <div id="ChannelSearch" class="centerDiv">
+        <a onclick="closeModal()"
+        ><img alt="close button" class="close" src="img/x.svg"
+        /></a>
+        <div id="ChannelSearchModal">
+            <label for="typeahead">Search Channels</label>
+            <input id="typeahead" class="typeahead" type="text" placeholder="Channel name...">
+            <button type="button" onclick="joinChannel();">Join</button>
+        </div>
+    </div>
+</div>
+<div class="browserSize hidden centerDiv">
+    <h1>Please use an optimal browser size for a better experience.</h1>
+</div>
+<div id="SignInContainer" class="visible">
+    <div id="SignInInner" class="visible centerDiv">
+        <img class="logo" alt="logo" src="img/logo.svg"/>
+        <div id="failedLogin" class="hidden">
+            <div class="error">
+                <img alt="error" src="img/error.svg"/>
+            </div>
+            <div id="errorMsg" class="errorMsg">
+                Login Failed. <span id="errorCount">X</span> attempts left.<br/>
+                Incorrect email or password.
+            </div>
+        </div>
+        <div id="noUser" class="hidden">
+            <div class="error">
+                <img alt="error" src="img/error.svg"/>
+            </div>
+            <div id="errorMsg2" class="errorMsg">
+                No such user.
+            </div>
+        </div>
+        <div id="successCreation" class="hidden">
+            <div class="successMsg">
+                Account created. Please login.
+            </div>
+        </div>
+        <label for="username">Username</label>
+        <input
+                type="text"
+                label="username"
+                id="username"
+                placeholder="Username"
+        />
+        <label for="password">Password</label>
+        <input
+                type="text"
+                label="password"
+                id="password"
+                placeholder="Password"
+        />
+        <button id="signInButton" type="button" onclick="connect();">
+            Sign In
+        </button>
+        <p class="centerText"><a onclick="swapSignIn()">Create Account</a></p>
+    </div>
+    <div id="CreateAccount" class="hidden centerDiv">
+        <h3 class="centerText">Create an Account</h3>
+        <div id="failedCreation" class="hidden">
+            <div class="error">
+                <img alt="error" src="img/error.svg"/>
+            </div>
+            <div class="errorMsg">
+                Could not create account.
+            </div>
+        </div>
+        <form name="input" method="get" id="signupForm">
+            <label for="usernameNew">Username</label>
+            <input type="text" label="" id="usernameNew" placeholder="Username"/>
+            <label for="passwordNew">Password</label>
+            <input type="text" label="" id="passwordNew" placeholder="Password"/>
+            <label for="first">First Name</label>
+            <input type="text" label="" id="first" placeholder="First Name"/>
+            <label for="last">Last Name</label>
+            <input type="text" label="" id="last" placeholder="Last Name"/>
+            <label for="email">Email</label>
+            <input type="text" label="" id="email" placeholder="Email Address"/>
+            <label for="bio">Bio</label
+            ><input type="text" label="" id="bio" placeholder="Biography"/>
+        </form>
+        <button
+                class="createAcctButton"
+                type="button"
+                id="createAccountButton"
+                onclick="createAccountButton()"
+        >
+            Submit
+        </button>
+        <p class="centerText">
+            <a onclick="swapSignIn()">I already have an account</a>
+        </p>
+    </div>
+</div>
+<div id="ParentContainer" class="hidden">
+    <div id="ListContainer">
+        <div id="UserProfile">
+            <h1>NEU-FSE</h1>
+            <h4 id="SignedInName"></h4>
+            <p><a id="EditProfileButton" class="greenLink"
+                  onclick="showElement(ProfileEditor)">Edit
+                Profile</a></p>
+        </div>
+        <p class="lightHeaders">
+            Channels
+            <span class="marginLeft"><a onclick="closeModal()" class="greenLink">Join
+                <img alt="plus symbol" src="img/plus.svg"/></a></span>
+        </p>
+        <ul id="ChannelList"></ul>
+        <p class="lightHeaders">Direct Messages</p>
+        <ul id="UserList"></ul>
+    </div>
+    <div id="MessagesList">
+        <div id="chatHeaderContainer">
+            <h1 class="ChatHeader"></h1>
+        </div>
+        <div id="log"></div>
+        <div id="SendField">
+            <input type="text" id="msg" placeholder="Message..."/>
+            <button id="sendButton" type="button" onclick="send();">Send</button>
+        </div>
+    </div>
+    <div id="ProfileEditor" class="hidden">
+        <label for="firstEdit">First Name</label>
+        <input type="text" label="" id="firstEdit" placeholder="First Name"/>
+        <label for="lastEdit">Last Name</label>
+        <input type="text" label="" id="lastEdit" placeholder="Last Name"/>
+        <label for="bioEdit">Bio</label
+        ><textarea type="textarea" label="" id="bioEdit"
+                   placeholder="Biography"></textarea>
+        <div id="AvatarEdit">
+            <div>
+                <input type="radio" id="avatar0" name="avatar" value="0" checked>
+                <label for="avatar0"><img alt="avatar0" src="img/0.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar1" name="avatar" value="1">
+                <label for="avatar1"><img alt="avatar1" src="img/1.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar2" name="avatar" value="2">
+                <label for="avatar2"><img alt="avatar2" src="img/2.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar3" name="avatar" value="3">
+                <label for="avatar3"><img alt="avatar3" src="img/3.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar4" name="avatar" value="4">
+                <label for="avatar4"><img alt="avatar4" src="img/4.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar5" name="avatar" value="5">
+                <label for="avatar5"><img alt="avatar5" src="img/5.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar6" name="avatar" value="6">
+                <label for="avatar6"><img alt="avatar6" src="img/6.jpg"></label>
+            </div>
+            <div>
+
+                <input type="radio" id="avatar7" name="avatar" value="7">
+                <label for="avatar7"><img alt="avatar7" src="img/7.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar8" name="avatar" value="8">
+                <label for="avatar8"><img alt="avatar8" src="img/8.jpg"></label>
+            </div>
+            <div>
+                <input type="radio" id="avatar9" name="avatar" value="9">
+                <label for="avatar9"><img alt="avatar9" src="img/9.jpg"></label>
+            </div>
+        </div>
+        <div id="profileEditorButtons">
+            <button type="button" onclick="hideElement(ProfileEditor);">Cancel</button>
+            <button type="button" onclick="saveProfile();">Save</button>
+        </div>
+    </div>
+    <div id="channelSidebar" class="hidden">
+        <p class="lightHeaders">Moderators</p>
+        <ul id="moderators"></ul>
+        <p class="lightHeaders">Participants</p>
+        <ul id="participants"></ul>
+    </div>
+</div>
+</body>
+<script src="websocket.js"></script>
+</html>

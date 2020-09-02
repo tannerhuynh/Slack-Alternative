@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>icon / status / error / filled / 16</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Sign-In" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-in-Error" transform="translate(-593.000000, -393.000000)">
+            <g id="Group" transform="translate(576.000000, 288.000000)">
+                <g id="notification-/-high-contrast-/-03-toast-/-error" transform="translate(0.000000, 88.000000)">
+                    <g id="icon-/-status-/-error-/-filled-/-16" transform="translate(17.000000, 17.000000)">
+                        <path d="M9,0 C4,0 0,4 0,9 C0,14 4,18 9,18 C14,18 18,14 18,9 C18,4 14,0 9,0 Z M12.5,13.5 L4.5,5.5 L5.5,4.5 L13.5,12.5 L12.5,13.5 Z" id="Fill" fill="#DA1E28"></path>
+                        <polygon id="Inner-Fill" fill="#FFFFFF" points="12.5 13.5 4.5 5.5 5.5 4.5 13.5 12.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

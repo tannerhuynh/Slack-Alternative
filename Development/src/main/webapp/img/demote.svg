@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>promote</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Direct-Message" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Channel-Message" transform="translate(-1008.000000, -48.000000)" fill="#1C1C1C">
+            <g id="Icons/Arrows/single-up" transform="translate(1012.000000, 56.000000) rotate(180.000000) translate(-1012.000000, -56.000000) translate(1008.000000, 48.000000)">
+                <path d="M0.400379721,5.8 C0.840379721,6.13 1.46837972,6.042 1.79937972,5.6 L2.99637972,4.005 L2.99637972,15 C2.99637972,15.553 3.44437972,16 3.99637972,16 C4.54837972,16 4.99637972,15.553 4.99637972,15 L4.99637972,3.995 L6.20037972,5.6 C6.53137972,6.043 7.15937972,6.132 7.59937972,5.8 C8.04237972,5.469 8.13137972,4.842 7.79937972,4.401 L4.79937972,0.401 C4.61137972,0.149 4.31437972,0 4.00037972,0 C3.68537972,0 3.38837972,0.149 3.20037972,0.401 L0.200379721,4.401 C-0.131620279,4.842 -0.0416202794,5.469 0.400379721,5.8" id="arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

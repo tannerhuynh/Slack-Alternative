@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>boot</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Direct-Message" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Channel-Message" transform="translate(-1032.000000, -51.000000)" fill="#1C1C1C">
+            <g id="Icons/Miscellaneous/x-small" transform="translate(1032.000000, 51.000000)">
+                <path d="M6.4141,5 L9.7071,1.707 C10.0981,1.316 10.0981,0.684 9.7071,0.293 C9.3161,-0.098 8.6841,-0.098 8.2931,0.293 L5.0001,3.586 L1.7071,0.293 C1.3161,-0.098 0.6841,-0.098 0.2931,0.293 C-0.0979,0.684 -0.0979,1.316 0.2931,1.707 L3.5861,5 L0.2931,8.293 C-0.0979,8.684 -0.0979,9.316 0.2931,9.707 C0.4881,9.902 0.7441,10 1.0001,10 C1.2561,10 1.5121,9.902 1.7071,9.707 L5.0001,6.414 L8.2931,9.707 C8.4881,9.902 8.7441,10 9.0001,10 C9.2561,10 9.5121,9.902 9.7071,9.707 C10.0981,9.316 10.0981,8.684 9.7071,8.293 L6.4141,5 Z" id="x"></path>
+            </g>
+        </g>
+    </g>
+</svg>
